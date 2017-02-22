@@ -1,0 +1,254 @@
+html,body,div,span,i,img,p,ul,li,textarea{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  height: 100%;
+}
+
+#window{
+  /*height: 95%;*/
+}
+
+#window .windowCatalog{
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 250px;
+  overflow: auto;
+}
+
+.windowContent{
+  margin-left: 245px;
+  height: 100%;
+}
+
+
+#gride{
+  height: 32px;
+  line-height: 32px;
+  overflow: auto;
+  font-size: 14px;
+  text-indent: 20px;
+  border-bottom:1px solid #ccc;
+  position: relative;
+}
+
+
+#tree{
+  /*margin-top: 30px;*/
+  display: inline-block;
+
+  /*min-width: 200px;*/
+}
+
+#tree .treeNode{
+  font-size: 16px;
+  overflow: hidden;
+
+}
+
+#tree .blank{
+  float: left;
+  width: 20px;
+  height: 32px;
+}
+
+#tree .title{
+  /*padding-left: 20px;*/
+  overflow: hidden;
+
+}
+
+#tree .childrenNode{
+  line-height: 32px;
+  overflow: hidden;
+}
+
+#tree .childrenValue{
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+#tree .titleIcon{/*引入标题图标时*/
+  float: left;
+  width: 20px;
+  height: 32px;
+  cursor: pointer;
+  background: url('./package.png') no-repeat left center;
+  user-select:none;
+}
+
+#tree .titleName{
+  /*float: left;*/
+  display: block;
+  margin-left: 20px;
+  line-height: 32px;
+  cursor: pointer;
+  white-space:nowrap;
+  user-select:none;
+  padding-left: 20px;
+  background: url('./package.png') no-repeat left center;
+}
+
+#tree .telescopic{
+  width: 20px;
+  height: 32px;
+  float: left;
+  background: url('./hide.png') no-repeat center center;
+}
+
+#tree .grandsonNode{
+  padding-left: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  user-select:none;
+  white-space:nowrap;
+  background: url('./file.png') no-repeat left center;
+}
+
+
+
+#fileFolderShow{
+  height: 100%;
+}
+
+#fileFolderShow .dataFrame{
+  float: left;
+  width: 75px;
+  margin-left: 20px;
+  cursor: pointer;
+  position: relative;
+  border:1px solid transparent;
+  border-radius: 5px;
+  user-select:none;
+  margin-top: 10px;
+}
+
+
+
+#fileFolderShow  .data-icon{
+  height: 50px;
+
+}
+
+#fileFolderShow .active{
+  background: #c4ddfc;
+}
+
+#fileFolderShow .folder-item .data-icon{
+  background: url('./folder.png') no-repeat center center;
+}
+
+#fileFolderShow .file-item .data-icon{
+  background: url('./fileBig.png') no-repeat center center;
+}
+
+#fileFolderShow .dataName{
+  line-height: 16px;
+  font-size: 14px;
+  text-align: center;
+  /*padding-bottom: 10px;*/
+  height: 32px;
+  margin-top:5px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+#fileFolderShow .newName{
+  width: 90%;
+  padding:0 5%;
+  height: 32px;
+  overflow: visible;
+  resize: none;
+  /*padding-bottom: 10px;*/
+  display: none;
+  margin-top:5px;
+}
+
+#backPre,#formNext{
+  position: absolute;
+  top: 5px;
+  padding: 0px 10px;
+  border-radius: 3px;
+  border:1px solid #ccc;
+  cursor: pointer;
+  user-select:none;
+  color: #666;
+  width: 40px;
+  text-align: center;
+  text-indent: 0;
+  line-height: 20px;
+}
+
+#backPre{
+  right: 75px;
+}
+
+#backPre:hover,#formNext:hover{
+  color: white;
+  background-color: #ff8800;
+}
+
+#move{
+  width: 5px;
+  height: 100%;
+  float: left;
+}
+
+#move:hover{
+  cursor: e-resize;
+}
+
+#move .blank{
+  width: 2px;
+  height: 100%;
+  float: left;
+}
+
+#move .line{
+  width: 1px;
+  height: 100%;
+  float: left;
+  background-color: #ccc;
+}
+
+#formNext{
+  right: 5px;
+}
+
+#meau{
+  position: absolute;
+  width: 100px;
+  border:1px solid #ccc;
+  border-bottom:0;
+  user-select:none;
+  left:0;
+  top: 0;
+  display: none;
+}
+
+#meau .keyAct{
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: white;
+  border-bottom:1px solid #ccc;
+  cursor: pointer;
+}
+
+#meau .keyAct:hover{
+  background-color: #7aadec;
+  color: white;
+}

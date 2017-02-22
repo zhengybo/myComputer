@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./myComputer.js" type="text/javascript"></script>
+  </script>
+  </head>
+  <body>
+    <div id="gride">
+      <span class="topName">全部</span>
+      <span class="formName"></span>
+      <div id="backPre">back</div>
+      <div id="formNext">pre</div>
+    </div>
+    <div id="window">
+      <div id="windowCatalog" class="windowCatalog">
+        <div id="tree" ></div>
+      </div>
+      <div id="move">
+        <div class="blank"></div>
+        <div class="line"></div>
+        <div class="blank"></div>
+      </div>
+      <div id="windowContent" class="windowContent">
+        <div id="detailData"></div>
+        <div id="fileFolderShow"></div>
+      </div>
+      <ul id="meau" class="meau">
+        <li belong="dataFrame" id="openFolder" class="openFolder keyAct">打开</li>
+        <li belong="folder" id="newFolder" class="newFolder keyAct">新建文件夹</li>
+        <li id="newFile" class="newFile keyAct">新建文件</li>
+        <li id="delete" class="delete keyAct">删除</li>
+        <li  id="newName" class="newName keyAct">重命名</li>
+        <li id='attribute' class="attribute keyAct">属性</li>
+      </ul>
+
+    </div>
+  </body>
+
+  <script type="text/javascript">
+  var computer = null;
+  window.onload = function(){
+    let obj = new XMLHttpRequest();
+      obj.open("GET", './data.json', true);
+      obj.onreadystatechange = () => {
+        if (obj.readyState == 4 && (obj.status == 200 || obj.status == 304)) {
+          let data = JSON.parse(obj.response);
+          computer =new MyComputer({
+            data :data['data'],
+            startObj:{id:-1,name:"全部"}//顶部文件id 名字(数据决定)
+          });
+          console.log('数组数据:',computer.getResult());//获取操作后的数据
+          console.log('树状数据:',computer.treeData(computer.getResult(),-1,0));//树状数据
+        }
+      };
+    obj.send();
+  }
+
+  </script>
+</html>

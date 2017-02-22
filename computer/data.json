@@ -1,0 +1,12 @@
+{
+  "data":[
+    {"id":-1,"name":"全部","parent":-2,"type":"folder"},
+    {"id":0,"name":"第一级别1","parent":-1,"type":"folder"},
+    {"id":1,"name":"第一级别2","parent":-1,"type":"folder"},
+    {"id":2,"name":"第一级别3","parent":-1,"type":"folder"},
+    {"id":5,"name":"第二级别2-1","parent":1,"type":"file"},
+    {"id":6,"name":"第二级别3-1","parent":2,"type":"file"},
+    {"id":7,"name":"第三级别1-1-1","parent":3,"type":"Folder"},
+    {"id":8,"name":"第三级别2-1-1","parent":4,"type":"file"}
+  ]
+}
